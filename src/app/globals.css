@@ -173,6 +173,16 @@ img {
   max-width: 100%;
 }
 
+.hero-avatar {
+  display: block;
+  width: clamp(5.5rem, 12vw, 7.5rem);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { hero } from "@/lib/content";
 
 export function Hero() {
@@ -5,6 +7,14 @@ export function Hero() {
     <section className="hero">
       <div className="section-inner hero-grid">
         <div>
+          <Image
+            className="hero-avatar"
+            src="/ayelet-logo.png"
+            alt={hero.avatarAlt}
+            width={480}
+            height={480}
+            priority
+          />
           <p className="eyebrow">{hero.eyebrow}</p>
           <p className="hero-kicker">{hero.kicker}</p>
           <h1>
