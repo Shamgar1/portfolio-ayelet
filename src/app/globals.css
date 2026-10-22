@@ -154,7 +154,7 @@ img {
 }
 
 .hero {
-  padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 4.5rem);
+  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .hero-grid {
@@ -385,7 +385,7 @@ img {
 }
 
 .section {
-  padding: clamp(3rem, 7vw, 5.5rem) 0;
+  padding: clamp(2rem, 4.5vw, 3.25rem) 0;
   scroll-margin-top: calc(var(--header-h) + 0.5rem);
 }
 
@@ -394,7 +394,7 @@ img {
 }
 
 .section-head {
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.75rem;
   max-width: 42rem;
 }
 
