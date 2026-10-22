@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { Quiz } from "@/components/quiz";
 import { hero } from "@/lib/content";
 
 export function Hero() {
@@ -26,28 +27,16 @@ export function Hero() {
             ))}
           </h1>
           <p className="lede">{hero.sub}</p>
-          <p className="hero-quote">{hero.quote}</p>
-          <div className="hero-actions">
-            <a className="btn btn-primary" href="#work">
-              {hero.cta}
-            </a>
-          </div>
+          <p className="hero-quote">{hero.proof}</p>
+          <a className="hero-stat" href={hero.stat.url} target="_blank" rel="noreferrer">
+            <strong dir="ltr">{hero.stat.value}</strong>
+            <span>
+              {hero.stat.text}
+              <small>{hero.stat.source}</small>
+            </span>
+          </a>
         </div>
-        <aside className="hero-panel">
-          <p className="hero-panel-label">{hero.panelLabel}</p>
-          {hero.prompts.map((prompt, index) => (
-            <div className="hero-chip" key={prompt.title}>
-              <span className={`chip-icon chip-icon--${index === 1 ? "navy" : "sky"}`} aria-hidden="true">
-                {index + 1}
-              </span>
-              <div>
-                <strong>{prompt.title}</strong>
-                <span>{prompt.hint}</span>
-              </div>
-            </div>
-          ))}
-          <p className="hero-panel-reply">{hero.panelReply}</p>
-        </aside>
+        <Quiz />
       </div>
     </section>
   );

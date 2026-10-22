@@ -11,7 +11,7 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <a className="header-cta" href="#work">
+        <a className="header-cta" href="#quiz">
           {headerCta}
         </a>
       </div>

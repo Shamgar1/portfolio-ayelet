@@ -34,6 +34,16 @@ export function Work() {
                   <h4>{work.solvesLabel}</h4>
                   <p>{project.solves}</p>
                 </div>
+                {"recommendations" in project && project.recommendations ? (
+                  <div className="work-block work-recs">
+                    <h4>{work.recommendationsLabel}</h4>
+                    <ol>
+                      {project.recommendations.map((rec) => (
+                        <li key={rec}>{rec}</li>
+                      ))}
+                    </ol>
+                  </div>
+                ) : null}
                 {"url" in project && project.url ? (
                   <a className="work-link" href={project.url} target="_blank" rel="noreferrer">
                     {project.urlLabel ?? work.linkLabel}

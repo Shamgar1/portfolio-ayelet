@@ -70,13 +70,24 @@ function PortalIcon() {
   );
 }
 
+function AgentIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="5" y="8" width="14" height="11" rx="3" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M12 4.5V8M9.5 13h.01M14.5 13h.01M9.5 16h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="12" cy="4" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
 const icons = {
   landing: <PageIcon />,
   bots: <ChatIcon />,
   automations: <FlowIcon />,
   crm: <LinkIcon />,
   dashboards: <DashIcon />,
-  portals: <PortalIcon />
+  portals: <PortalIcon />,
+  agents: <AgentIcon />
 };
 
 export function Services() {
@@ -94,6 +105,11 @@ export function Services() {
               <div className={`service-icon service-icon--${item.accent}`}>{icons[item.id as keyof typeof icons]}</div>
               <h3>{item.title}</h3>
               <p>{item.body}</p>
+              {"stat" in item && item.stat ? (
+                <a className="service-stat" href={item.statUrl} target="_blank" rel="noreferrer">
+                  {item.stat}
+                </a>
+              ) : null}
             </article>
           ))}
         </div>
